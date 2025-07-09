@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Inicio</title>
+  <link rel="stylesheet" href="css/estilos.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <a href="#" class="nav-logo">
+                    <img src="logo.png" alt="Logo cafe" class="logo-image">
+                  </a>
+              <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+              <label for="menu-toggle" class="menu-icon"></label>
+              <ul class="nav-menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="Producto.html">Producto</a></li>
+                <li><a href="Quienes_Somos.html">Quienes Somos</a></li>
+                <li><a href="Atencion_Cliente.html">Atención al Cliente</a></li>
+                <li><a href="usuaio.html">Usuario</a></li>
+                <li><a href="busqueda.html">Búsqueda</a></li>
+                <li><a href="carrito.html">Carrito</a></li>
+              </ul>
+            </div>
+          </nav>
+    </header>
+    
+
+    <section class="novedades">
+        <h2>Novedades</h2>
+      </section>
+
+
+    <!-- Carrusel -->
+    <div id="carousel" class="carousel">
+      <button class="carousel-button prev" onclick="moveSlide(-1)">‹</button>
+      <div class="carousel-track-container">
+        <ul class="carousel-track">
+          <li class="carousel-slide"><img src="imagenes/1.jpg" alt="1"></li>
+          <li class="carousel-slide"><img src="imagenes/2.jpg" alt="2"></li>
+          <li class="carousel-slide"><img src="imagenes/3.jpg" alt="3"></li>
+        </ul>
+      </div>
+      <button class="carousel-button next" onclick="moveSlide(1)">›</button>
+    </div>
+   <!-- Carrusel -->
+
+
+<!---Productos en promocion-->
+
+<div class="promo-container">
+    <div class="promo-card">
+      <div class="discount-badge">50%</div>
+      <img src="imagenes/4.jpg" alt="Promo 1">
+    </div>
+  
+    <div class="promo-card">
+      <div class="discount-badge">30%</div>
+      <img src="imagenes/5.jpg" alt="Promo 2">
+    </div>
+  
+    <div class="promo-card">
+      <div class="discount-badge">10%</div>
+      <img src="imagenes/6.jpg" alt="Promo 3">
+  </div>
+  
+  <div class="promo-card">
+    <div class="discount-badge">50%</div>
+    <img src="imagenes/1.jpg" alt="Promo 1">
+  </div>
+
+  <div class="promo-card">
+    <div class="discount-badge">30%</div>
+    <img src="imagenes/2.jpg" alt="Promo 2">
+  </div>
+
+  <div class="promo-card">
+    <div class="discount-badge">10%</div>
+    <img src="imagenes/3.jpg" alt="Promo 3">
+</div>
+  
+</div>  
+<!---Productos en promocion-->
+
+
+
+<footer class="site-footer">
+    <div class="footer-content">
+      <p>© 2025 Derechos reservados.</p>
+      <p>Horario L-S: 7:30 am - 5:00pm</p>
+    </div>
+  </footer>
+
+
+  <script>
+    // Carrusel  
+    
+    let currentIndex = 0;
+    function moveSlide(direction) {
+      const track = document.querySelector('.carousel-track');
+      const slides = document.querySelectorAll('.carousel-slide');
+      const totalSlides = slides.length;
+
+      currentIndex = (currentIndex + direction + totalSlides) % totalSlides;
+      const newPosition = -currentIndex * slides[0].offsetWidth;
+      track.style.transform = `translateX(${newPosition}px)`;
+    }
+
+    // Toggle menú móvil
+    const navToggle = document.getElementById('menu-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+
+    navToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('nav-menu_visible');
+    });
+  </script>
+
+
+
+  
+
+</body>
+</html>

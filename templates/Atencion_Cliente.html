@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Inicio</title>
+  <link rel="stylesheet" href="css/estilos.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <a href="#" class="nav-logo">
+                    <img src="logo.png" alt="Logo cafe" class="logo-image">
+                  </a>
+              <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+              <label for="menu-toggle" class="menu-icon"></label>
+              <ul class="nav-menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="Producto.html">Producto</a></li>
+                <li><a href="Quienes_Somos.html">Quienes Somos</a></li>
+                <li><a href="Atencion_Cliente.html">Atención al Cliente</a></li>
+                <li><a href="usuaio.html">Usuario</a></li>
+                <li><a href="busqueda.html">Búsqueda</a></li>
+                <li><a href="carrito.html">Carrito</a></li>
+              </ul>
+            </div>
+          </nav>
+    </header>
+    
+<br>
+<br>
+
+<section class="contacto-container">
+  <!-- Formulario de contacto -->
+  <div class="formulario-contacto">
+    <h2>¿Necesita contactarnos?</h2>
+    <p>Puede enviarnos un correo electrónico o bien contactarnos mediante nuestro número telefónico.</p>
+    <form>
+      <input type="text" placeholder="Nombre" required>
+      <input type="tel" placeholder="Número telefónico" required>
+      <input type="email" placeholder="Correo electrónico" required>
+      <textarea placeholder="Comentario" required></textarea>
+      <br>
+      <button type="submit">Enviar</button>
+    </form>
+  </div>
+
+  <div class="info-contacto">
+    <h2>Información de contacto</h2>
+    <p><strong>Teléfono:</strong><br>0000-0000</p>
+    <p><strong>Correo electrónico:</strong><br>xxxxx@xxx.xxx</p>
+    <p><strong>Horarios:</strong><br>Lunes - Sábado:<br>7:30 AM – 5:00 PM</p>
+
+    <div class="mapa-contacto">
+      <h2>Ubicación en mapa</h2>
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.9713781614364!2d-84.19158442596087!3d9.936339390165838!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0ff005b3ba7a5%3A0x75b0c9caf1917204!2sStarbucks%20%E2%80%A2%20Santa%20Ana!5e0!3m2!1sen!2scr!4v1752086752895!5m2!1sen!2scr" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </div>
+</section>
+
+
+    
+ <div class="accordion">
+    <h2>Preguntas frecuentes</h2>
+
+    <button class="accordion-item">¿Productos de calidad?</button>
+    <div class="panel">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec blandit a metus et elementum.</p>
+    </div>
+
+    <button class="accordion-item">¿Cuánto tiempo tarda la entrega?</button>
+    <div class="panel">
+      <p>Información sobre el tiempo de entrega.</p>
+    </div>
+
+    <button class="accordion-item">Ubicación</button>
+    <div class="panel">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec blandit a metus et elementum.</p>
+    </div>
+
+    <button class="accordion-item">¿Cómo puedo contactarlos?</button>
+    <div class="panel">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec blandit a metus et elementum.</p>
+    </div>
+  </div>
+
+
+<script>
+    
+   document.querySelectorAll('.accordion-item').forEach(item => {
+  item.addEventListener('click', () => {
+  
+    const panel = item.nextElementSibling;
+    if (panel.style.display === 'block') {
+      panel.style.display = 'none';
+    } else {
+      panel.style.display = 'block';
+    }
+  });
+});
+
+  </script>
+
+
+
+
+
+  
+
+</body>
+</html>
