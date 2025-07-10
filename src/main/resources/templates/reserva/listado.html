@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity6">
+
+    <head >   
+        <title>Listado de Reservas</title>
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" th:href="@{/css/estilos.css}" />
+    </head>
+    <body>
+        <section th:replace="~{reserva/fragmentos :: listadoReservas}"></section>        
+    </body>
+</html>
