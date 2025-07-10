@@ -1,5 +1,8 @@
 package com.proyecto.dao;
 
-public class CategoriaDao {
+import com.proyecto.domain.Categoria;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface CategoriaDao extends JpaRepository <Categoria,Long> {
 
 }
